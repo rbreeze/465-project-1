@@ -1,17 +1,21 @@
 <!DOCTYPE HTML>
-Hello world! Foo bar baz!
-<script>
-var express = require('express');
-var app = express();
+<html>
+<head>
+<title>Vista del Lago XC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<h1 id="header">Vista del Lago Cross Country</h1>
+<img id ="vista-eagle" src="Vista Eagle@2x.png">
+<h2 id="subheader">Home of the <em>Eagles</em></h2>
+<div class="divider"></div>
+<h2>Welcome to our <span class="funky">funky fresh</span> website.</h2>
+<p>Unfortunately, it is still <b>under construction</b>. While we're working, visit the links below!</p>
+<p>For <b>photos</b> of our team, go <a href="http://katiekoning.zenfolio.com/f451821812" target="_blank">here</a>.
+<p>For our team's <b>stats</b>, go <a href="http://www.athletic.net/CrossCountry/School.aspx?SchoolID=20572" target="_blank">here</a>.</p>
+<p>To athletes, go <a href="http://xcstats.com" target="_blank">here</a> to access your running <b>logs</b>.</p>
 
-app.set('port', (process.env.PORT || 5000));
-app.use(express.static(__dirname + '/public'));
-
-app.get('/', function(request, response) {
-  response.send('Hello World!');
-});
-
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
-});
-</script>
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+</body>
+</html>
