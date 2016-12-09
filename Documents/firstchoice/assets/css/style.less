@@ -1,0 +1,606 @@
+//out: style.css
+
+@font-family {
+  src: url('/assets/fonts/AvenirNext.ttc');
+  font-family: 'Avenir Next';
+}
+
+@font-family {
+  src: url('/assets/fonts/Charter.ttc');
+  font-family: 'Charter';
+}
+
+@ui-blue: #58A5EF;
+
+@header-height: 500px;
+@page-header-height: 350px;
+@footer-height: 200px;
+
+@grid: url("/assets/images/grid.png");
+@grid-size: 60px 60px;
+
+body {
+  margin: 0; padding: 0;
+}
+
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -1 * @footer-height;
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+.header, .page-header {
+  position: absolute;
+  display: block;
+  top: 0;
+  width: 100%;
+  height: @header-height;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  .nav {
+    position: absolute;
+    display: block;
+    width: 100%;
+    font-family: 'Avenir Next';
+    color: #fff;
+    top: 20px;
+    font-size: 20px;
+    z-index: 1;
+    text-align: right;
+    .icon {
+      display: block;
+      position: absolute;
+      margin: 0;
+      left: 37px;
+      text-align: left;
+      width: 42px;
+    }
+    ul {
+      left: 0;
+      padding-left: 0;
+      margin: 0;
+      margin-right: 30px;
+      display: block;
+      li.selected, li:hover {
+        font-weight: 400;
+        border-bottom: 2px solid #fff;
+      }
+      li {
+        display: inline-block;
+        font-weight: 400;
+        padding: 10px;
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .tint {
+    background: rgba(60,60,60,.36);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+  }
+
+}
+
+.header {
+
+  .header-text {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 8em;
+    left: 9vw;
+    color: #fff;
+    h1, h2 {
+      font-family: 'Avenir Next';
+      font-weight: 400;
+      margin: 0;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: 55px;
+      font-weight: 500;
+    }
+    h2 {
+      font-size: 40px;
+    }
+    h3 {
+      margin: 0;
+      margin-left: 10px;
+      margin-top: 10px;
+      width: 70%;
+      font-family: 'Charter';
+      font-style: italic;
+      font-weight: 300;
+      font-size: 23px;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      float: left;
+      text-align: center;
+      display: block;
+      text-transform: uppercase;
+      background: @ui-blue;
+      padding: 8px;
+      @side-padding: 12px;
+      padding-left: @side-padding;
+      padding-right: @side-padding;
+      color: #fff;
+      font-size: 14px;
+      font-family: 'Avenir Next';
+      font-weight: 500;
+      border: 2px solid @ui-blue;
+      margin: 7px;
+      a, a:visited {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+
+    .button.secondary {
+      box-sizing: border-box;
+      background: none;
+      font-weight: 500;
+      border: 2px solid #fff;
+    }
+
+  }
+
+}
+
+.page-header {
+  height: @page-header-height;
+  .header-text {
+    h1 {
+      width: 100%;
+      height: 100px;
+      display: block;
+      position: absolute;
+      z-index: 1;
+      text-align: center;
+      top: 55%;
+      margin-top: -50px;
+      font-family: 'Avenir Next';
+      font-size: 55px;
+      font-weight: 500;
+      color: white;
+    }
+  }
+}
+
+.quote-bar {
+  // background: #F9F9F9;
+  background: @grid;
+  background-size: @grid-size;
+  font-family: 'Charter';
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  top: @header-height;
+  text-align: center;
+  .quote {
+    font-size: 20px;
+    color: #4B4B4B;
+    display: inline-block;
+    margin: 18px;
+    @side-margin: 30px;
+    margin-left: @side-margin;
+    margin-right: @side-margin;
+    p {
+      margin: 0;
+    }
+    blockquote {
+      font-style: italic;
+      font-size: 16px;
+      color: #9B9B9B;
+      margin: 0;
+    }
+  }
+}
+
+.content {
+  width: 720px;
+  display: block;
+  float: none;
+  margin: 0 auto;
+  margin-top: @header-height + 120px;
+  margin-bottom: 100px;
+
+  img {
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+  }
+  a, a:visited {
+    color: @ui-blue;
+  }
+  h2 {
+    font-family: 'Avenir Next';
+    color: #000;
+    font-size: 31px;
+    border-bottom: 1px solid #E5E5E5;
+    text-align: center;
+    width: 420px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 25px;
+    font-weight: 400;
+    line-height: 43px;
+    padding-bottom: 17px;
+  }
+  h3 {
+    text-transform: uppercase;
+    font-family: 'Avenir Next';
+    color: @ui-blue;
+    font-size: 23px;
+    margin-bottom: 0px;
+    font-weight: 400;
+  }
+  h4 {
+    margin-top: 5px;
+    font-family: 'Charter';
+    font-size: 17px;
+    font-weight: normal;
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+  p {
+    margin-top: 9px;
+    font-size: 14px;
+    line-height: 23px;
+    color: #4B4B4B;
+    font-family: 'Charter';
+  }
+  form {
+    @form-width: 300px;
+    width: @form-width;
+    display: block;
+    margin: 0 auto;
+    margin-top: 25px;
+    text-align: center;
+
+    input {
+      width: @form-width - 24px;
+      background: #FAFAFA;
+      padding: 10px;
+      -webkit-appearance: none;
+      border: 1px solid #E0E0E0;
+      outline: none;
+      box-shadow: none;
+      font-size: 16px;
+      margin: 10px;
+      margin-left: 0px;
+      margin-right: 0px;
+      font-family: 'Avenir Next';
+    }
+
+    input.button {
+      .header .header-text .button;
+      width: 125px;
+      position: relative;
+      display: block;
+      float: none;
+      margin: 0 auto;
+      margin-top: 15px;
+    }
+
+    #first {
+      margin-right: 13px;
+    }
+
+    #first, #last {
+      display: inline-block;
+      width: (@form-width / 2) - 31px;
+    }
+
+  }
+  ul {
+    font-family: 'Charter';
+    font-size: 15px;
+    line-height: 23px;
+    color: #4B4B4B;
+    margin-left: -10px;
+  }
+
+  .blocks {
+    margin-left: 30px;
+    margin-top: 20px;
+
+    .block {
+      width: 320px;
+      vertical-align: top;
+      margin-right: 20px;
+      font-family: 'Charter';
+      display: inline-block;
+    }
+
+  }
+
+  @profile-width: 125px;
+  .headshot {
+    display: block;
+    margin: 0 auto;
+    border-radius: 100%;
+    width: @profile-width;
+    height: @profile-width;
+    background-color: #afafaf;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .5s all ease;
+  }
+
+  .profiles {
+    @profile-side-margin: 35px;
+    width: (@profile-width * 3) + (@profile-side-margin * 7);
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    .profile {
+      vertical-align: top;
+      width: @profile-width;
+      margin-left: @profile-side-margin;
+      margin-right: @profile-side-margin;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      display: inline-block;
+      font-family: Avenir Next;
+      text-align: center;
+      .label {
+        font-size: 20px;
+        margin-top: 20px;
+        a {
+          text-decoration: none;
+          color: #000;
+        }
+        a:hover {
+          color: @ui-blue;
+        }
+      }
+    }
+  }
+
+}
+
+.page-content {
+  width: 600px;
+  margin-top: @page-header-height + 30px !important;
+}
+
+.profile-content {
+  width: 650px;
+}
+
+@footer-padding: 5px;
+.footer, .page-wrap:after {
+  height: @footer-height + @footer-padding;
+}
+
+.footer {
+  background: @grid;
+  background-size: @grid-size;
+  padding-top: @footer-padding;
+  @left-padding: 45px;
+  h2 {
+    font-family: 'Avenir Next';
+    font-weight: 400;
+    color: #5c5c5c;
+    font-size: 20px;
+    margin-left: @left-padding;
+    margin-bottom: 10px;
+    margin-top: 35px;
+  }
+
+  h3 {
+    font-family: 'Charter';
+    font-weight: 400;
+    font-size: 14px;
+    color: #8F8F8F;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: @left-padding;
+  }
+
+  .icons {
+    margin-left: @left-padding + 2px;
+    margin-top: 17px;
+    a, a:visited {
+      color: black;
+      i {
+        margin-right: 7px;
+        font-size: 27px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 750px) {
+  .content {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    margin-top: @header-height + 120px;
+    .blocks {
+      display: block;
+      margin: 0 auto;
+      .block {
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+      }
+    }
+    .profiles {
+      width: 80%;
+      .profile {
+        width: 45%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+    }
+  }
+  .page-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .quote-bar {
+    .quote {
+      font-size: 18px;
+      margin-left: 12px;
+      margin-right: 12px;
+    }
+  }
+
+  .nav {
+    ul {
+      li {
+        font-size: 17px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .content {
+    margin-top: @header-height + 250px;
+  }
+  .quote-bar {
+    .quote {
+      margin: 0;
+      @margin: 15px;
+      margin-top: @margin;
+      margin-bottom: @margin;
+      width: 100%;
+    }
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  .header {
+    .header-text {
+      top: 9em;
+      left: 8vw;
+    }
+  }
+
+  .header, .page-header {
+    .nav {
+      position: relative;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      a {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 13px;
+        .icon {
+          display: block;
+          margin: 0 auto;
+          left: 0 !important;
+          position: relative;
+        }
+      }
+      ul {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        display: block;
+        padding: 0px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        li {
+          margin: 6px;
+          padding: 0px;
+          font-size: 17px;
+        }
+      }
+    }
+  }
+
+  .content {
+    h2 {
+      font-size: 26px;
+      width: 90%;
+    }
+    .blocks {
+      .block {
+        width: 90%;
+      }
+    }
+    .profiles {
+      .profile {
+        width: 100%;
+        .headshot {
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+
+    form {
+      width: 90%;
+      input {
+        width: 90%;
+      }
+      #first, #last {
+        width: 38%;
+      }
+    }
+  }
+
+  .page-header {
+    .header-text {
+      h1 {
+        font-size: 35px;
+        top: 6.3em;
+      }
+    }
+  }
+
+  .page-content {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .header {
+    .header-text {
+      top: 10.5em;
+      h1 {
+        font-size: 43px;
+      }
+      h2 {
+        font-size: 33px;
+      }
+      .button {
+        padding: 6px;
+      }
+    }
+  }
+  .nav {
+    ul {
+      li {
+        margin: 3px !important;
+      }
+    }
+  }
+}
